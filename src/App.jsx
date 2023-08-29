@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// import AppLayout from "./pages/AppLayout";
+import AppLayout from "./pages/AppLayout";
 
 
 import Homepage from "./pages/Homepage";
@@ -21,6 +21,7 @@ function App() {
           <Route path="product" element={<Product />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="login" element={<Login />} />
+          <Route path="app" element={<AppLayout />} />
 
           {/* <Route path="*" element={<PageNotFound />} /> */}
         </Routes>

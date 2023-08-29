@@ -1,11 +1,11 @@
 
 import AppNav from "../componenet/AppNav";
-import styles from "./AppLayout.module.css";
-
+import SideBar from "../componenet/SideBar";
+import styles from './AppLayout.module.css'
 function AppLayout() {
   return (
     <div className={styles.app} >
-      <AppNav />
+      <SideBar />
     </div>
   );
 }
