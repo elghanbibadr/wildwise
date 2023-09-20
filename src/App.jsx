@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AppLayout from "./pages/AppLayout";
 
-
+import CityList from "./componenet/CityList";
 import Homepage from "./pages/Homepage";
 import Pricing from "./pages/Pricing";
 import Product from "./pages/Product";
@@ -21,7 +21,11 @@ function App() {
           <Route path="product" element={<Product />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="login" element={<Login />} />
-          <Route path="app" element={<AppLayout />} />
+          <Route path="app" element={<AppLayout />} >
+            <Route index element={<CityList />} />
+            <Route path="countries" element={<p>countries</p>} />
+            <Route path="cities" element={<p>cities</p>} />
+          </Route>
 
           {/* <Route path="*" element={<PageNotFound />} /> */}
         </Routes>

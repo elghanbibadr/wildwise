@@ -1,13 +1,14 @@
 import Logo from "../componenet/Logo"
 import styles from './SideBar.module.css'
-import AppNav from "./AppNav"
+import { Outlet } from "react-router-dom";
+import AppNav from "./AppNav";
 const SideBar = () => {
     return (
         <div className={styles.sidebar}>
             <Logo />
             <AppNav />
 
-            {/* <Outlet /> */}
+            <Outlet />
 
             <footer className={styles.footer}>
                 <p className={styles.copyright}>
