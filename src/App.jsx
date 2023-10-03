@@ -6,6 +6,7 @@ import CityList from "./componenet/CityList";
 import Homepage from "./pages/Homepage";
 import Pricing from "./pages/Pricing";
 import Product from "./pages/Product";
+import CountryList from "./componenet/CountryList";
 import Login from "./pages/Login";
 import { useEffect, useState } from "react";
 // dist/assets/index-59fcab9b.css   30.56 kB │ gzip:   5.14 kB
@@ -23,7 +24,7 @@ function App() {
         setIsLoading(true)
         const res = await fetch(`${base_url}/cities`)
         const data = await res.json()
-        // setCities(data)
+        setCities(data)
       } catch {
         alert('there was an error fetching')
       } finally {
@@ -46,7 +47,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="app" element={<AppLayout />} >
             <Route index element={<CityList cities={cities} />} />
-            <Route path="countries" element={<p>countries</p>} />
+            <Route path="countries" element={<CountryList cities={cities} isLoading={isLoading} />} />
             <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />} />
           </Route>
 
