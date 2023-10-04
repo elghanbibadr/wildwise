@@ -21,6 +21,8 @@ function City() {
   const {id}=useParams()
 
 
+  console.log(id)
+
   const { cityName, emoji, date, notes } = currentCity;
 
   return (
