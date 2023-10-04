@@ -8,6 +8,7 @@ import Pricing from "./pages/Pricing";
 import Product from "./pages/Product";
 import CountryList from "./componenet/CountryList";
 import Login from "./pages/Login";
+import City from "./componenet/City";
 import { useEffect, useState } from "react";
 // dist/assets/index-59fcab9b.css   30.56 kB │ gzip:   5.14 kB
 // dist/assets/index-f7c12d89.js   572.44 kB │ gzip: 151.29 kB
@@ -49,6 +50,7 @@ function App() {
             <Route index element={<CityList cities={cities} />} />
             <Route path="countries" element={<CountryList cities={cities} isLoading={isLoading} />} />
             <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />} />
+            <Route path="cities/:id" element={<City/>} />
           </Route>
 
           {/* <Route path="*" element={<PageNotFound />} /> */}
